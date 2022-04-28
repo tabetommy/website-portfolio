@@ -8,6 +8,7 @@
   --color-change-0: #edc655;
   --color-change-50: #fcffad;
   --color-change-100: #f76414;
+  --social-media-icons-color: #06066f;
 }
 
 
@@ -94,7 +95,11 @@ button:focus,
 	flex-direction: column;
 	text-align: center;
 }
-
+i{
+font-size:100px;
+padding:0 5px;
+color:var(--social-media-icons-color)
+}
 /*profile rules*/
 .profile {
   max-width: 700px;

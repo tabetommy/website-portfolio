@@ -130,6 +130,14 @@ button:focus,
   text-align: center;
 }
 
+
+i{
+font-size:30px;
+padding:0 5px;
+color:#06066f
+}
+
+
 /*profile rules*/
 .profile {
   max-width: 700px;
