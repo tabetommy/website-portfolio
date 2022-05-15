@@ -207,6 +207,11 @@ input{
   padding: 10px;
 }
 
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
 .contact-information{
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

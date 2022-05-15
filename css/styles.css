@@ -162,12 +162,16 @@ input{
   padding: 0 20px;
   
 }
-.contact-collect-information{
+.contact-form{
   flex-grow: 2;
   padding: 0 20px 10px 20px;
 }
 .contact-button{
  padding:5px 20px; 
+}
+.error-message {
+  color: red;
+  font-size: 14px;
 }
 
 
