@@ -7,47 +7,160 @@
     <link rel="shortcut icon" href="https://www.wikipedia.org/static/favicon/wikipedia.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.production.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
 </head>
 <body >
     <header class="page-header">
-        <nav class="main-navigation page-header__item">
-            <ul role="menubar" class="navigation-list">
-              <li role="presentation">
-                <a href="index.html" role="menuitem" class="navigation-list__item ">Home</a>
-              </li>
-              <li role="presentation">
-                <a href="about.html" role="menuitem" class="navigation-list__item ">About me</a>
-              </li>
-              <li role="presentation">
-                <a href="contact.html" role="menuitem" class="navigation-list__item ">Contact</a>
-              </li>
-              <li role="presentation">
-                <a href="projects.html" role="menuitem" class="navigation-list__item ">Projects</a>
-              </li>
-            </ul>
+        <nav class="nav-bar">
+          <a href="#home" role="menuitem">Home</a>
+          <a href="#about" role="menuitem">About me</a>
+          <a href="#projects" role="menuitem">Projects</a>
+          <a href="#contact" role="menuitem">Contact</a>      
         </nav>
-    </header>
-    <div class="profile">
-      <div class="profile__text">
-        <img src="img/tommy.jpg" class="profile__portrait" alt="Tommy Portrait">
-        <div class="profile__Introduction">
-          <p class="profile__name">Hey, I'm Tommy Tabe.<br><span class="profile__role">I'm a Fullstack Web Developer from Berlin, Germany</span></p>
-          <a href="projects.html" class="button">View my projects</a>
-        </div> 
-      </div>
-    </div> 
-    <div class="about">
-      <p>About me</p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Dicta minima commodi molestias facilis accusamus alias, hic omnis qui facere debitis, possimus quis distinctio amet, deleniti harum impedit cum error repellendus.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Minus suscipit cupiditate omnis voluptatem tempore. Illo, culpa! Dolorum labore neque nulla delectus. 
-      Aliquid nostrum amet quisquam aperiam eius, dolor inventore adipisci.
+        <div class="ham-menu">
+          <img src="img/menu.svg" class="ham-menu-icon" alt="hamburger_menu_icon">
+          <p class="menu-close">X</p>
+        </div>
+        <div class="nav-bar-toggle">
+          <a href="#home" role="menuitem" class="nav-bar-toggle-link">Home</a>
+          <a href="#about" role="menuitem">About me</a>
+          <a href="#projects" role="menuitem">Projects</a>
+          <a href="#contact" role="menuitem">Contact</a>  
+        </div>
+    </header>  
+    <!-- intoduction section -->
+    <div class="intro" id="home">
+        <p class="intro-text">
+          Hi, my name is <span class="intro-text-name">Tommy Tabe</span><br>
+          I am a Full-stack Webdeveloper
+        </p>
+        <button class="intro-btn btn">Know more</button>
     </div>
+    <!-- about section -->
+    <div class="about" id="about">
+        <h1 class="about-title titles">About me</h1>
+        <div class="about-card">
+          <div class="about-card-image-con">  
+            <img src="img/tommy.jpg" class="about-img" alt="Tommy Portrait">
+          </div>
+          <div class="about-text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing . Lorem ipsum dolor sit, amet consectetur adipisicing . 
+              Lorem ipsum dolor sit, amet consectetur adipisicing . Lorem ipsum dolor sit, amet consectetur adipisicing . 
+            </p>
+            <a href="files/cv.pdf" class="btn" download>View my resume</a>
+          </div>
+        </div>
+    </div>
+    <!-- projecgts section -->
+    <div class="projects" id="projects">
+        <h1 class="project-title titles">Projects</h1>
+        <div class="project-list">
+            <div class="projects-card">
+              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-card-text">
+                <h1>Pokemon-app</h1>
+                <p>
+                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
+                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                </p>
+                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div> 
+            <div class="projects-card">
+              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-card-text">
+                <h1>Pokemon-app</h1>
+                <p>
+                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
+                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                </p>
+                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>  
+            <div class="projects-card">
+              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-card-text">
+                <h1>Pokemon-app</h1>
+                <p>
+                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
+                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                </p>
+                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>  
+            <div class="projects-card">
+              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-card-text">
+                <h1>Pokemon-app</h1>
+                <p>
+                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
+                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                </p>
+                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>  
+            <div class="projects-card">
+              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-card-text">
+                <h1>Pokemon-app</h1>
+                <p>
+                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
+                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                </p>
+                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>  
+            <div class="projects-card">
+              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-card-text">
+                <h1>Pokemon-app</h1>
+                <p>
+                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
+                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                </p>
+                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+              </div>
+            </div>    
+        </div>
+    </div>
+
+    <!-- contact section  -->
+    <div class="contact" id="contact">
+      <div>
+        <h1 class="contact-title titles">Contact me</h1>
+      </div>
+      <form action="#" id="form-message">
+        <div class="form">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="user_name" ><br> 
+        </div>
+        <div class="form">
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="user_email" ><br>  
+        </div>
+        <div class="form">
+          <label for="message">Message</label><br>
+          <textarea id="message" name="user_message" rows=10 cols=50 maxlength="200" placeholder="Leave a message" required>
+          </textarea><br>
+        </div>
+        <div class="contact-button-con">
+          <button class="contact-button btn">Send </button>
+        </div>
+      </form>
+    </div>  
+
+    <!-- footer -->
     <footer class="page-footer">
       <p>Find me on</p>
       <div class="social-media">
@@ -57,5 +170,6 @@
       </div>
     </footer>
     <script src="js/tota11y.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
