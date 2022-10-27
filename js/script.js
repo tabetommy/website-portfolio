@@ -1,6 +1,7 @@
+/**************handle element reveal******************/
 
 function reveal() {
-	var reveals = document.querySelectorAll(".projects-card");
+	var reveals = document.querySelectorAll(".reveal");
 	
 	for (var i = 0; i < reveals.length; i++) {
 		var windowHeight = window.innerHeight;
@@ -18,7 +19,7 @@ function reveal() {
 	window.addEventListener("scroll", reveal);
 
 
-// handle hamburger menu toggle
+/*******************************handle hamburger menu toggle*******************/
 (function($){
 	$('.menu-close').hide();
 	$('.nav-bar-toggle').hide();
@@ -38,7 +39,8 @@ function reveal() {
 
 })(jQuery)
 
-/*handle email submission*/
+
+/*********************handle email submission**********************************************/
 
 const form = document.getElementById("form-message"); 
 

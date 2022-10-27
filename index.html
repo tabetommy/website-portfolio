@@ -34,16 +34,16 @@
     </header>  
     <!-- intoduction section -->
     <div class="intro" id="home">
-        <p class="intro-text">
+        <p>
           Hi, my name is <span class="intro-text-name">Tommy Tabe</span><br>
           I am a Full-stack Webdeveloper
         </p>
-        <button class="intro-btn btn">Know more</button>
+        <a href="#projects" class="intro-btn btn">See my projects</a>
     </div>
     <!-- about section -->
-    <div class="about" id="about">
+    <div class="about reveal" id="about">
         <h1 class="about-title titles">About me</h1>
-        <div class="about-card">
+        <div class="about-card ">
           <div class="about-card-image-con">  
             <img src="img/tommy.jpg" class="about-img" alt="Tommy Portrait">
           </div>
@@ -61,7 +61,9 @@
         <h1 class="project-title titles">Projects</h1>
         <div class="project-list">
             <div class="projects-card">
-              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-image-con">
+                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+              </div>
               <div class="projects-card-text">
                 <h1>Pokemon-app</h1>
                 <p>
@@ -73,7 +75,9 @@
               </div>
             </div> 
             <div class="projects-card">
-              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-image-con">
+                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+              </div>
               <div class="projects-card-text">
                 <h1>Pokemon-app</h1>
                 <p>
@@ -85,7 +89,9 @@
               </div>
             </div>  
             <div class="projects-card">
-              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-image-con">
+                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+              </div>
               <div class="projects-card-text">
                 <h1>Pokemon-app</h1>
                 <p>
@@ -97,7 +103,9 @@
               </div>
             </div>  
             <div class="projects-card">
-              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-image-con">
+                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+              </div>
               <div class="projects-card-text">
                 <h1>Pokemon-app</h1>
                 <p>
@@ -109,7 +117,9 @@
               </div>
             </div>  
             <div class="projects-card">
-              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-image-con">
+                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+              </div>
               <div class="projects-card-text">
                 <h1>Pokemon-app</h1>
                 <p>
@@ -121,7 +131,9 @@
               </div>
             </div>  
             <div class="projects-card">
-              <img src="img/tommy.jpg" class="projects-image" alt="Tommy Portrait">
+              <div class="projects-image-con">
+                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+              </div>
               <div class="projects-card-text">
                 <h1>Pokemon-app</h1>
                 <p>
@@ -136,18 +148,18 @@
     </div>
 
     <!-- contact section  -->
-    <div class="contact" id="contact">
+    <div class="contact reveal" id="contact">
       <div>
         <h1 class="contact-title titles">Contact me</h1>
       </div>
       <form action="send" method = "post" id="form-message" enctype = "multipart/form-data">
         <div class="form">
           <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" ><br> 
+          <input type="text" id="name" name="name" required><br> 
         </div>
         <div class="form">
           <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" ><br>  
+          <input type="email" id="email" name="email" required><br>  
         </div>
         <div class="form">
           <label for="message">Message</label><br>
