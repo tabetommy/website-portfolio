@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio Site</title>
-    <link rel="shortcut icon" href="https://www.wikipedia.org/static/favicon/wikipedia.ico">
+    <link rel="shortcut icon" href="./img/favcon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet">
@@ -22,7 +22,8 @@
           <a href="#contact" role="menuitem">Contact</a>      
         </nav>
         <div class="ham-menu">
-          <img src="img/menu.svg" class="ham-menu-icon" alt="hamburger_menu_icon">
+          <!-- <img src="img/menu.svg" class="ham-menu-icon" alt="hamburger_menu_icon"> -->
+          <i class="fa fa-navicon ham-menu-icon" style="font-size:25px;color:white"></i>
           <p class="menu-close">X</p>
         </div>
         <div class="nav-bar-toggle">
@@ -49,85 +50,86 @@
           </div>
           <div class="about-text">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing . Lorem ipsum dolor sit, amet consectetur adipisicing . 
-              Lorem ipsum dolor sit, amet consectetur adipisicing . Lorem ipsum dolor sit, amet consectetur adipisicing . 
+              While an Environmental science student, i got interested in web developement and I took a short course, after which i decided to completely switch career from Environmental science to web developement.
+            </p>
+            <p>
+              I am passionate about developing websites and web applications, hence i took a complete Fullstack devevelopment training at Career Foundry. So far, I have built at least 10 real world projects. Through my training and building projects i have familiarised myself with the neccesary web technologies, industry standards and collaborating with others. 
             </p>
             <a href="files/cv.pdf" class="btn" download>View my resume</a>
           </div>
         </div>
     </div>
-    <!-- projecgts section -->
+    <!-- projects section -->
     <div class="projects" id="projects">
         <h1 class="project-title titles">Projects</h1>
         <div class="project-list">
             <div class="projects-card">
               <div class="projects-image-con">
-                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+                <img src="img/meet.jpg" class="projects-image" alt="Tommy Portrait">
               </div>
               <div class="projects-card-text">
-                <h1>Pokemon-app</h1>
+                <h1>Meet app</h1>
                 <p>
-                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
-                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                  A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. 
+                  The application uses the Google Calendar API to fetch upcoming events.
                 </p>
-                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+                <p><b>Technologies: React, aws lambda, service worker, Google calendar API</b></p>
+                <a href="https://github.com/tabetommy/meetup/tree/main" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/meetup/" target="_blank" class="btn">Live Demo</a>
               </div>
             </div> 
             <div class="projects-card">
               <div class="projects-image-con">
-                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+                <img src="img/myflix_client.jpg" class="myflix-client" 
+                alt="myflix-client-potrait">
               </div>
               <div class="projects-card-text">
-                <h1>Pokemon-app</h1>
+                <h1>myFlix</h1>
                 <p>
-                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
-                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                  A single-page,MERN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies.
                 </p>
+                <p><b>Technologies: MERN, myFlix api</b></p>
                 <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
                 <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
               </div>
             </div>  
             <div class="projects-card">
               <div class="projects-image-con">
-                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+                <img src="img/IP_Address_Tracker.jpg" class="projects-image" alt="Tommy Portrait">
               </div>
               <div class="projects-card-text">
-                <h1>Pokemon-app</h1>
+                <h1>IP Address Tracker</h1>
                 <p>
-                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
-                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                  IP adress tracker, tracks ip adresses and displays the IPadress, Location, time zones and Internet service provider, the location on a map. 
                 </p>
-                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/tabetommy/ip-address-tracker" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/ip-address-tracker/" target="_blank" class="btn">Live Demo</a>
               </div>
             </div>  
             <div class="projects-card">
               <div class="projects-image-con">
-                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+                <img src="img/myflix_client_angular.jpg" class="projects-image" alt="Tommy Portrait">
               </div>
               <div class="projects-card-text">
-                <h1>Pokemon-app</h1>
+                <h1>myFlix</h1>
                 <p>
-                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
-                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                  A single-page, MEAN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies. 
                 </p>
-                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/tabetommy/myFlix_Angular_client" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/myFlix_Angular_client/movies" target="_blank" class="btn">Live Demo</a>
               </div>
             </div>  
             <div class="projects-card">
               <div class="projects-image-con">
-                <img src="img/pokemon.jpg" class="projects-image" alt="Tommy Portrait">
+                <img src="img/magic_brain.jpg" class="magic_brain" alt="magic_brain-Portrait">
               </div>
               <div class="projects-card-text">
-                <h1>Pokemon-app</h1>
+                <h1>face detection app</h1>
                 <p>
-                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
-                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
+                  Face detection is an app that uses an api called clarifai to detect faces in a picture and sets a boundary the faces. This app that can adapted to facial recognition systems.
                 </p>
-                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+                <a href="https://github.com/tabetommy/facerecognition" target="_blank" class="btn">Source code</a>
+                <a href="https://tabetommy.github.io/facerecognition/" target="_blank" class="btn">Live Demo</a>
               </div>
             </div>  
             <div class="projects-card">
