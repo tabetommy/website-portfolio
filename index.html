@@ -22,7 +22,6 @@
           <a href="#contact" role="menuitem">Contact</a>      
         </nav>
         <div class="ham-menu">
-          <!-- <img src="img/menu.svg" class="ham-menu-icon" alt="hamburger_menu_icon"> -->
           <i class="fa fa-navicon ham-menu-icon" style="font-size:25px;color:white"></i>
           <p class="menu-close">X</p>
         </div>
@@ -89,7 +88,7 @@
                   A single-page,MERN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies.
                 </p>
                 <p><b>Technologies: MERN, myFlix api</b></p>
-                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
+                <a href="https://github.com/tabetommy/myFlix_client" target="_blank" class="btn">Source code</a>
                 <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
               </div>
             </div>  
@@ -116,7 +115,7 @@
                   A single-page, MEAN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies. 
                 </p>
                 <a href="https://github.com/tabetommy/myFlix_Angular_client" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/myFlix_Angular_client/movies" target="_blank" class="btn">Live Demo</a>
+                <a href="https://tabetommy.github.io/myFlix_Angular_client/welcome" target="_blank" class="btn">Live Demo</a>
               </div>
             </div>  
             <div class="projects-card">
@@ -154,25 +153,29 @@
       <div>
         <h1 class="contact-title titles">Contact me</h1>
       </div>
-      <form action="send" method = "post" id="form-message" enctype = "multipart/form-data">
+      <form id="form-message" method="POST">
         <div class="form">
           <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" required><br> 
+          <input type="text" id="name" name="name" required><br>
+          <h5 id="namecheck">**Name is missing</h5> 
         </div>
         <div class="form">
           <label for="email">Email</label><br>
           <input type="email" id="email" name="email" required><br>  
+          <h5 id="emailcheck">**Email is missing</h5> 
+          <h5 id="emailcheckchar">**Enter valid email</h5>
         </div>
         <div class="form">
           <label for="message">Message</label><br>
-          <textarea id="message" name="message" rows=10 cols=50 maxlength="200" placeholder="Leave a message" required>
-          </textarea><br>
+          <textarea id="message" name="message" rows=10 cols=50 maxlength="200" placeholder="Leave a message..." required></textarea><br>
+          <h5 id="messagecheck">**message is missing</h5> 
         </div>
         <div class="contact-button-con">
           <button 
           class="contact-button btn"
           type="submit" 
-          value="Submit"
+          value="submit">
+          <!-- onclick="sendEmail()" --> 
           >
             Submit 
           </button>
@@ -190,6 +193,15 @@
       </div>
     </footer>
     <script src="js/tota11y.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('7z-0h1DpdEQ__bPll');
+        })();
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

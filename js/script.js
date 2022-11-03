@@ -19,7 +19,8 @@ function reveal() {
 	window.addEventListener("scroll", reveal);
 
 
-/*******************************handle hamburger menu toggle*******************/
+/*******handle hamburger menu toggle******/
+
 (function($){
 	$('.menu-close').hide();
 	$('.nav-bar-toggle').hide();
@@ -40,23 +41,133 @@ function reveal() {
 })(jQuery)
 
 
-/*********************handle email submission**********************************************/
+/*****handle email submission***/
 
-const form = document.getElementById("form-message"); 
+// function sendEmail(){
 
-const sendMail = (mail) => {
-	fetch("/send", {
-	  method: "post", 
-	  body: mail, 
-	}).then((response) => {
-	  return response.json();
-	});
-  };
+// 	//email params and body
+// 	var contactParams = {
+//         from_name: document.getElementById('name').value,
+//         email: document.getElementById('email').value,
+//         message: document.getElementById('message').value
+//     	};
 
-const formEvent = form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let mail = new FormData(form);
-  sendMail(mail);
-})
+//   emailjs.send('service_0wfjh57', 'template_1bsizph', contactParams)
+//     .then((response)=> {
+//         console.log("SUCCESS!", response.status, response.text);
+//         alert("Message has been succesfully sent");
+//     }, 
+//     (error)=>{
+//         console.log('FAILED...', error);
+//         alert('FAILED...', error);
+//     });
+// }
 
 
+$(document).ready(function() {
+
+	// 1.handle form validation
+	$("#namecheck").hide();
+	$("#emailcheck").hide();
+	$("#emailcheckchar").hide();
+	$("#messagecheck").hide();
+  	let nameError = true;
+  	let emailError= true;
+  	let emailCharError=true;
+  	let messageError= true;
+  
+
+    //validate name
+	function validateName(){
+		if($('#name').val()===""){
+			$("#namecheck").show();
+			nameError=false;
+			return false
+		}else{
+			// $("#namecheck").hide();
+			return true
+		}
+	}
+
+	//validate email
+	function validateEmail(){
+		if($('#email').val()===""){
+			$("#emailcheck").show();
+			emailError=false;
+			return false
+		}else{
+			// $("#emailcheck").hide();
+			return true
+		}
+			 
+  	  }
+ 
+ 	//check if email has @
+  	function isEmailHavingAtSign(){
+  		if($('#email').val().indexOf('@')===-1 && $('#email').val().length>0){
+			$('#emailcheckchar').show()
+			emailCharError=false;
+		}else{
+			return true
+		}
+  	}
+
+  	//checks if email has dot sign
+  	function isEmailHavingDotSign(){
+		if($('#email').val().indexOf('.')===-1 && $('#email').val().length>0){
+			$('#emailcheckchar').show()
+			emailCharError=false;
+		}else{
+			return true
+		}
+
+  	}
+
+
+	//validate messaage
+	function validateMessage(){
+		if($('#message').val()===""){
+			$("#messagecheck").show();
+			messageError=false;
+			return false
+		}else{
+			$("#messagecheck").hide();
+			return true
+		}
+	}
+
+
+  	// 2.handle form submission	
+    $('.contact-button').click(function(event){
+    	event.preventDefault();
+    	validateName();
+    	validateEmail();
+    	isEmailHavingAtSign();
+    	isEmailHavingDotSign();
+    	validateMessage();
+
+    	if(nameError==true && 
+    		emailError==true && 
+    		emailCharError==true &&
+    		messageError==true){
+    		console.log($('#name').val(), $('#email').val(), $('#message').val());
+    		// window.location.reload();
+	    	emailjs.send('service_0wfjh57', 'template_1bsizph', {
+	    		from_name:$('#name').val() ,
+		        email: $('#email').val(),
+		        message: $('#message').val()
+	    	})
+			.then((response)=> {
+			    console.log("SUCCESS!", response.status, response.text);
+			    alert("Message has been succesfully sent");
+			}, 
+		    (error)=>{
+		        console.log('FAILED...', error);
+		        alert('FAILED...', error);
+		    });
+    	}else{
+    		return false
+    	}	
+    });
+});
+//issue 1 when i enter wrong para, to correct it immediately does not work i haave to reload page
