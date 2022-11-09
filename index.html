@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
 </head>
 <body >
     <header class="page-header">
@@ -50,14 +50,13 @@
           <div class="about-text">
             <p>
               While an Environmental science student, i got interested in web developement and I took a short course, after which i decided to completely switch career from Environmental science to web developement.
-            </p>
-            <p>
               I am passionate about developing websites and web applications, hence i took a complete Fullstack devevelopment training at Career Foundry. So far, I have built at least 10 real world projects. Through my training and building projects i have familiarised myself with the neccesary web technologies, industry standards and collaborating with others. 
             </p>
             <a href="files/cv.pdf" class="btn" download>View my resume</a>
           </div>
         </div>
     </div>
+    
     <!-- projects section -->
     <div class="projects" id="projects">
         <h1 class="project-title titles">Projects</h1>
@@ -68,13 +67,9 @@
               </div>
               <div class="projects-card-text">
                 <h1>Meet app</h1>
-                <p>
-                  A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. 
-                  The application uses the Google Calendar API to fetch upcoming events.
-                </p>
-                <p><b>Technologies: React, aws lambda, service worker, Google calendar API</b></p>
-                <a href="https://github.com/tabetommy/meetup/tree/main" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/meetup/" target="_blank" class="btn">Live Demo</a>
+                <button type="button" class="btn modal-btn">
+                  See more
+                </button>
               </div>
             </div> 
             <div class="projects-card">
@@ -84,12 +79,9 @@
               </div>
               <div class="projects-card-text">
                 <h1>myFlix</h1>
-                <p>
-                  A single-page,MERN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies.
-                </p>
-                <p><b>Technologies: MERN, myFlix api</b></p>
-                <a href="https://github.com/tabetommy/myFlix_client" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+                <button type="button" class="btn modal-btn">
+                  See more
+                </button>
               </div>
             </div>  
             <div class="projects-card">
@@ -98,37 +90,9 @@
               </div>
               <div class="projects-card-text">
                 <h1>IP Address Tracker</h1>
-                <p>
-                  IP adress tracker, tracks ip adresses and displays the IPadress, Location, time zones and Internet service provider, the location on a map. 
-                </p>
-                <a href="https://github.com/tabetommy/ip-address-tracker" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/ip-address-tracker/" target="_blank" class="btn">Live Demo</a>
-              </div>
-            </div>  
-            <div class="projects-card">
-              <div class="projects-image-con">
-                <img src="img/myflix_client_angular.jpg" class="projects-image" alt="Tommy Portrait">
-              </div>
-              <div class="projects-card-text">
-                <h1>myFlix</h1>
-                <p>
-                  A single-page, MEAN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies. 
-                </p>
-                <a href="https://github.com/tabetommy/myFlix_Angular_client" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/myFlix_Angular_client/welcome" target="_blank" class="btn">Live Demo</a>
-              </div>
-            </div>  
-            <div class="projects-card">
-              <div class="projects-image-con">
-                <img src="img/magic_brain.jpg" class="magic_brain" alt="magic_brain-Portrait">
-              </div>
-              <div class="projects-card-text">
-                <h1>face detection app</h1>
-                <p>
-                  Face detection is an app that uses an api called clarifai to detect faces in a picture and sets a boundary the faces. This app that can adapted to facial recognition systems.
-                </p>
-                <a href="https://github.com/tabetommy/facerecognition" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/facerecognition/" target="_blank" class="btn">Live Demo</a>
+                <button type="button" class="btn modal-btn">
+                  See more
+                </button>
               </div>
             </div>  
             <div class="projects-card">
@@ -137,14 +101,33 @@
               </div>
               <div class="projects-card-text">
                 <h1>Pokemon-app</h1>
-                <p>
-                  Pokemon-app loads and displays pokemons fetched from the pokeApi.
-                  Each pokemon element displays futher details about the particular pokemon by use of a modal on user click.
-                </p>
-                <a href="https://github.com/tabetommy/pokemon-app" target="_blank" class="btn">Source code</a>
-                <a href="https://tabetommy.github.io/pokemon-app/" target="_blank" class="btn">Live Demo</a>
+                <button type="button" class="btn modal-btn">
+                  See more
+                </button>
               </div>
-            </div>    
+            </div>   
+            <div class="projects-card">
+              <div class="projects-image-con">
+                <img src="img/magic_brain.jpg" class="magic_brain" alt="magic_brain-Portrait">
+              </div>
+              <div class="projects-card-text">
+                <h1>face detection app</h1>
+                <button type="button" class="btn modal-btn" >
+                  See more
+                </button>
+              </div>
+            </div> 
+            <div class="projects-card">
+              <div class="projects-image-con">
+                <img src="img/myflix_client_angular.jpg" class="projects-image" alt="Tommy Portrait">
+              </div>
+              <div class="projects-card-text">
+                <h1>myFlix</h1>
+                <button type="button" class="btn modal-btn">
+                  See more
+                </button>
+              </div>
+            </div>      
         </div>
     </div>
 
@@ -175,7 +158,6 @@
           class="contact-button btn"
           type="submit" 
           value="submit">
-          <!-- onclick="sendEmail()" --> 
           >
             Submit 
           </button>
@@ -192,7 +174,28 @@
         <a href="https://www.linkedin.com/in/tommy-egbe-304464116/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </footer>
+      <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body-description"></div>
+          <div class="modal-body-stack"></div>
+          <div class="modal-footer">
+            <a target="_blank" class="btn source-code">Source code</a>
+            <a target="_blank" class="btn live-site">Live-site</a>
+        </div>
+      </div>
+    </div>
     <script src="js/tota11y.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
