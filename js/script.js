@@ -98,20 +98,21 @@ function reveal() {
 	$('.menu-close').hide();
 	$('.nav-bar-toggle').hide();
 	$('.ham-menu-icon').click(function(){
-		$('.nav-bar-toggle').slideToggle('slow',function(){
+		$('.nav-bar-toggle').slideDown('fast',function(){
 			$('.ham-menu-icon').hide();
 			$('.menu-close').show()
 		});
 	});
 
 	$('.menu-close').click(function() {
-	$( ".nav-bar-toggle" ).slideToggle( 'slow', function() {
+	$( ".nav-bar-toggle" ).slideToggle( 'fast', function() {
 	$( ".menu-close" ).hide();
 	$( ".ham-menu-icon" ).show();
 	});
 	});
 
 })(jQuery)
+
 
 
 /*****handle form validation and submission***/
