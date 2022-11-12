@@ -44,7 +44,7 @@
   ]
 
 $(function () {
-        var showMessage = function (title, description,tech,sourceCode,liveSite) {
+        let showMessage = function (title, description,tech,sourceCode,liveSite) {
 
             $(".modal-title").html(title);
             $(".modal-body-description").html(description);
@@ -72,24 +72,44 @@ $(function () {
 
 
 /**************handle element reveal******************/
+let windowHeight = window.innerHeight;
+let elementVisible = 150;
 
-function reveal() {
-	var reveals = document.querySelectorAll(".reveal");
-	
-	for (var i = 0; i < reveals.length; i++) {
-		var windowHeight = window.innerHeight;
-		var elementTop = reveals[i].getBoundingClientRect().top;
-		var elementVisible = 150;
-	
+const revealContactMe=()=> {
+	let reveals = document.querySelectorAll(".reveal");
+	reveals.forEach(reveal=>{
+		let elementTop = reveal.getBoundingClientRect().top;
 		if (elementTop < windowHeight - elementVisible) {
-		reveals[i].classList.add("active");
+		reveal.classList.add("active");
 		} else {
-		reveals[i].classList.remove("active");
+		reveal.classList.remove("active");
 		}
+	})
 	}
-	}
+
+const revealAboutMe=()=>{
+	let revealLeft=document.querySelectorAll(".reveal-left");
+	let elementTop = revealLeft[0].getBoundingClientRect().top;
+		if (elementTop < windowHeight - elementVisible) {
+		revealLeft[0].classList.add("active");
+		} else {
+		revealLeft[0].classList.remove("active");
+		}
+}
+
+const revealSkills=()=>{
+	let revealRight=document.querySelectorAll(".reveal-right");
+	let elementTop = revealRight[0].getBoundingClientRect().top;
+		if (elementTop < windowHeight - elementVisible) {
+		revealRight[0].classList.add("active");
+		} else {
+		revealRight[0].classList.remove("active");
+		}
+}
 	
-	window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", revealContactMe);
+window.addEventListener("scroll", revealAboutMe);
+window.addEventListener("scroll", revealSkills);
 
 
 /*******handle hamburger menu toggle******/
