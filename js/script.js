@@ -9,9 +9,16 @@
   {
     title:"myFlix",
     description:"A single-page,MERN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies.",
-    technology: "MERN, myFlix api",
+    technology: "MERN, React-Boostrap, React-redux, SCSS, myFlix api",
     liveSite:"https://tabetommy.github.io/myFlix_client/",
     sourceCode:"https://github.com/tabetommy/myFlix_client"
+  },
+  {
+    title:"interactive-comment-section",
+    description:"A fullstack, CRUD app and clone of the comment section of networking webapps like facebook. The user can creat, read, update and delete comments.",
+    technology: "MERN, tailwind CSS, interactive-comments-section api",
+    liveSite:"https://tabetommy.github.io/interactive-comments-section/",
+    sourceCode:"https://github.com/tabetommy/interactive-comments-section"
   },
   {
    title:"IP Address Tracker",
@@ -21,13 +28,6 @@
    sourceCode:"https://github.com/tabetommy/ip-address-tracker" 
   },
   {
-   title:"Pokemon",
-   description:"Pokemon-app loads and displays pokemons fetched from the pokeApi.Each pokemon element displays futher details about the particular pokemon by use of a modal on user click",
-   technology: "Vanilla JS, CSS, HTML, pokeApi",
-   liveSite:"https://tabetommy.github.io/pokemon-app/",
-   sourceCode:"https://github.com/tabetommy/pokemon-app" 
-  },
-  {
    title:"face detection app",
    description:"Face detection is an app that uses an api called clarifai to detect faces in a picture and sets a boundary the faces. This app that can adapted to facial recognition systems.",
    technology: "React,clarifai Api, tachyons css",
@@ -35,20 +35,20 @@
    sourceCode:"https://github.com/tabetommy/facerecognition" 
   },
   {
-   title:"myFlix-Angular",
-   description:"A single-page, MEAN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies.",
-   technology: "MEAN, myFlix api",
-   liveSite:"https://tabetommy.github.io/myFlix_Angular_client/welcome",
-   sourceCode:"https://github.com/tabetommy/myFlix_Angular_client" 
+   title:"Pokemon",
+   description:"Pokemon-app loads and displays pokemons fetched from the pokeApi.Each pokemon element displays futher details about the particular pokemon by use of a modal on user click",
+   technology: "Vanilla JS, CSS, HTML, pokeApi",
+   liveSite:"https://tabetommy.github.io/pokemon-app/",
+   sourceCode:"https://github.com/tabetommy/pokemon-app" 
   }
   ]
 
 $(function () {
-        let showMessage = function (title, description,tech,sourceCode,liveSite) {
+        let showMessage = (title, description,tech,sourceCode,liveSite)=> {
 
             $(".modal-title").html(title);
-            $(".modal-body-description").html(description);
-            $(".modal-body-stack").html("Resources: " + tech);
+            $(".modal-body-description").html("DESCRIPTION: " + description);
+            $(".modal-body-stack").html("STACK: " + tech);
             $(".source-code").attr("href", sourceCode)
             $(".live-site").attr("href", liveSite)
 
@@ -150,7 +150,7 @@ $(document).ready(function() {
   
 
     //validate name
-	function validateName(){
+	const validateName=()=>{
 		if($('#name').val()===""){
 			$("#namecheck").show();
 			nameError=false;
@@ -162,7 +162,7 @@ $(document).ready(function() {
 	}
 
 	//validate email
-	function validateEmail(){
+	const validateEmail=()=>{
 		if($('#email').val()===""){
 			$("#emailcheck").show();
 			emailError=false;
@@ -175,7 +175,7 @@ $(document).ready(function() {
   	  }
  
  	//check if email has @
-  	function isEmailHavingAtSign(){
+  	const isEmailHavingAtSign=()=>{
   		if($('#email').val().indexOf('@')===-1 && $('#email').val().length>0){
 			$('#emailcheckchar').show()
 			emailCharError=false;
@@ -185,7 +185,7 @@ $(document).ready(function() {
   	}
 
   	//checks if email has dot sign
-  	function isEmailHavingDotSign(){
+  	const isEmailHavingDotSign=()=>{
 		if($('#email').val().indexOf('.')===-1 && $('#email').val().length>0){
 			$('#emailcheckchar').show()
 			emailCharError=false;
@@ -197,7 +197,7 @@ $(document).ready(function() {
 
 
 	//validate messaage
-	function validateMessage(){
+	const validateMessage=()=>{
 		if($('#message').val()===""){
 			$("#messagecheck").show();
 			messageError=false;
@@ -222,8 +222,6 @@ $(document).ready(function() {
     		emailError==true && 
     		emailCharError==true &&
     		messageError==true){
-    		console.log($('#name').val(), $('#email').val(), $('#message').val());
-    		// window.location.reload();
 	    	emailjs.send('service_0wfjh57', 'template_1bsizph', {
 	    		from_name:$('#name').val() ,
 		        email: $('#email').val(),
@@ -232,6 +230,7 @@ $(document).ready(function() {
 			.then((response)=> {
 			    console.log("SUCCESS!", response.status, response.text);
 			    alert("Message has been succesfully sent");
+			    window.location.reload();
 			}, 
 		    (error)=>{
 		        console.log('FAILED...', error);

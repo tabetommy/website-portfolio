@@ -122,7 +122,7 @@ body{
 
 /*----------------------introduction------------------*/
 .intro{
-  margin: 0 0 150px 10%;
+  margin: 150px 0 0 10%;
 
 }
 
@@ -258,7 +258,7 @@ body{
 
 /*-----------------contact page--------------------------*/
 .contact{
-  background-color: var(--color-black-grey);
+  background-color: var(--color-primary);
   color: var(--color-white);
   max-width: 100%;
   margin: 0 auto;
@@ -425,12 +425,18 @@ textarea[placeholder]{
 /*-------------footer rules-------------------*/
 
 .page-footer{
-  background-color:var(--color-black) ;
+  background-color:var(--color-primary) ;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
   color: var(--color-white);
   padding: 20px 0;
+}
+
+.hz-line{
+  border: 1px white solid;
+  width: 80%;
+  margin: 0 auto 20px auto;
 }
 
 i{
