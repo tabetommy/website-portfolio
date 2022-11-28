@@ -149,26 +149,24 @@ $(document).ready(function() {
   	let messageError= true;
   
 
-    //validate name
+   //validate name
 	const validateName=()=>{
 		if($('#name').val()===""){
 			$("#namecheck").show();
 			nameError=false;
-			return false
 		}else{
-			// $("#namecheck").hide();
+			$("#namecheck").hide();
 			return true
 		}
 	}
 
-	//validate email
+	//check if email is present
 	const validateEmail=()=>{
 		if($('#email').val()===""){
 			$("#emailcheck").show();
 			emailError=false;
-			return false
 		}else{
-			// $("#emailcheck").hide();
+			$("#emailcheck").hide();
 			return true
 		}
 			 
@@ -177,9 +175,10 @@ $(document).ready(function() {
  	//check if email has @
   	const isEmailHavingAtSign=()=>{
   		if($('#email').val().indexOf('@')===-1 && $('#email').val().length>0){
-			$('#emailcheckchar').show()
+			$('#emailcheckchar').show();
 			emailCharError=false;
 		}else{
+			$('#emailcheckchar').hide();
 			return true
 		}
   	}
@@ -187,9 +186,10 @@ $(document).ready(function() {
   	//checks if email has dot sign
   	const isEmailHavingDotSign=()=>{
 		if($('#email').val().indexOf('.')===-1 && $('#email').val().length>0){
-			$('#emailcheckchar').show()
+			$('#emailcheckchar').show();
 			emailCharError=false;
 		}else{
+			$('#emailcheckchar').hide();
 			return true
 		}
 
@@ -201,7 +201,6 @@ $(document).ready(function() {
 		if($('#message').val()===""){
 			$("#messagecheck").show();
 			messageError=false;
-			return false
 		}else{
 			$("#messagecheck").hide();
 			return true
@@ -209,7 +208,16 @@ $(document).ready(function() {
 	}
 
 
-  	// 2.handle form submission	
+  //2. Check input values on key up
+
+  $('#name').keyup(()=>validateName());
+  $('#email').keyup(()=>validateEmail());
+  $('#email').keyup(()=>isEmailHavingAtSign());
+  $('#email').keyup(()=>isEmailHavingDotSign());
+  $('#message').keyup(()=>validateMessage());
+
+
+  	// 3.handle form submission	
     $('.contact-button').click(function(event){
     	event.preventDefault();
     	validateName();

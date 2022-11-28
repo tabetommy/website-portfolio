@@ -425,7 +425,7 @@ textarea[placeholder]{
 /*-------------footer rules-------------------*/
 
 .page-footer{
-  background-color:var(--color-primary) ;
+  background-color:var(--color-black-grey) ;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -433,17 +433,27 @@ textarea[placeholder]{
   padding: 20px 0;
 }
 
-.hz-line{
-  border: 1px white solid;
-  width: 80%;
-  margin: 0 auto 20px auto;
-}
-
 i{
   font-size:20px;
   padding:0 5px;
   color: var(--color-white);
 }
+
+.footer-link{
+  text-decoration: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.footer-link:hover,
+.footer-link:focus{
+  text-decoration: none;
+  color: var(--color-white);
+  }
+
+.footer-contacts{
+   margin-bottom: 10px;
+  }
 
 
 @media all and (max-width: 500px) {
@@ -461,6 +471,7 @@ i{
   .profile__text{
     display: block;
   }
+
 }
 
 @media all and (min-width: 500px){
@@ -490,11 +501,13 @@ i{
   }
 
   .nav-bar a:hover {
-    border-bottom: 2px solid var(--color-black);
+    background-color: var(--color-black-grey);
+    color: var(--color-white);
     
   }
 
 }
+
 
 
 @media all and (min-width: 500px) and (max-width: 750px){
@@ -520,6 +533,7 @@ i{
   }
   
 }
+
 
 @media all and (min-width: 750px) {
 
@@ -561,6 +575,19 @@ i{
   .about-skills-card{
     width: 90%;
     margin: 0 auto;
+  }
+
+  .page-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  background-color:var(--color-black-grey) ;
+  color: var(--color-white);
+  }
+
+  .footer-contacts{
+   margin-bottom: 0;
   }
 
 }
