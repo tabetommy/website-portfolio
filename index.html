@@ -25,7 +25,6 @@
           <p class="menu-close">X</p>
         </div>
         <div class="nav-bar-toggle">
-          <a href="#home" role="menuitem" class="nav-bar-toggle-link">Home</a>
           <a href="#about" role="menuitem">About me</a>
           <a href="#projects" role="menuitem">Projects</a>
           <a href="#contact" role="menuitem">Contact</a>  
@@ -44,13 +43,13 @@
     <div class="about-main" id="about">
       <h1 class="about-title titles">About me</h1>
       <div class="about">
-        <div class="about-text reveal-left">
+        <div class="about-text reveal">
           <p>
             I am a full stack JavaScript web developer with a background in Environmental science. Though studying Environmental science, I always had a keen interest in Tech. In 2020, out of curiosity I began learning web development technologies on Udemy. In March 2022, I took an intensive full stack web development training course at CareerFoundry. I am seeking a Full stack developer role at an exciting firm that will leverage my problem-solving(acquired from 5 of working on Environmentl projects) and web development technical skills to build accessible and modern websites and web apps. 
           </p>
           <a href="files/cv.pdf" class="btn resume-btn" download>Check my resume</a>
         </div>
-        <div class="about-skills reveal-right">
+        <div class="about-skills reveal">
           <span class="skills-header"><b>&ltBelow is a list of my skills/&gt<b></span>
           <div class="about-skills-card">
             <p>Frontend lanuages and libraries</p>
@@ -171,18 +170,18 @@
         <div class="form">
           <label for="name">Name</label><br>
           <input type="text" id="name" name="name" required><br>
-          <h5 id="namecheck">**Name is missing</h5> 
+          <span id="namecheck">**Name is missing</span> 
         </div>
         <div class="form">
           <label for="email">Email</label><br>
           <input type="email" id="email" name="email" required><br>  
-          <h5 id="emailcheck">**Email is missing</h5> 
-          <h5 id="emailcheckchar">**Enter valid email</h5>
+          <span id="emailcheck">**Email is missing</span> 
+          <span id="emailcheckchar">**Enter valid email</span>
         </div>
         <div class="form">
           <label for="message">Message</label><br>
           <textarea id="message" name="message" rows=10 cols=50 maxlength="200" placeholder="Leave a message..." required></textarea><br>
-          <h5 id="messagecheck">**message is missing</h5> 
+          <span id="messagecheck">**message is missing</span> 
         </div>
         <div class="contact-button-con">
           <button 
@@ -233,7 +232,7 @@
         </div>
       </div>
     </div>
-    <script src="js/tota11y.min.js"></script>
+    <!-- <script src="js/tota11y.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
     </script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
@@ -248,6 +247,6 @@
             emailjs.init('7z-0h1DpdEQ__bPll');
         })();
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/script-production.js"></script>
 </body>
 </html>

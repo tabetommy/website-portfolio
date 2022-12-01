@@ -72,10 +72,11 @@ $(function () {
 
 
 /**************handle element reveal******************/
-let windowHeight = window.innerHeight;
-let elementVisible = 150;
 
-const revealContactMe=()=> {
+
+const reveal=()=> {
+	let windowHeight = window.innerHeight;
+  let elementVisible = 150;
 	let reveals = document.querySelectorAll(".reveal");
 	reveals.forEach(reveal=>{
 		let elementTop = reveal.getBoundingClientRect().top;
@@ -87,29 +88,8 @@ const revealContactMe=()=> {
 	})
 	}
 
-const revealAboutMe=()=>{
-	let revealLeft=document.querySelectorAll(".reveal-left");
-	let elementTop = revealLeft[0].getBoundingClientRect().top;
-		if (elementTop < windowHeight - elementVisible) {
-		revealLeft[0].classList.add("active");
-		} else {
-		revealLeft[0].classList.remove("active");
-		}
-}
-
-const revealSkills=()=>{
-	let revealRight=document.querySelectorAll(".reveal-right");
-	let elementTop = revealRight[0].getBoundingClientRect().top;
-		if (elementTop < windowHeight - elementVisible) {
-		revealRight[0].classList.add("active");
-		} else {
-		revealRight[0].classList.remove("active");
-		}
-}
 	
-window.addEventListener("scroll", revealContactMe);
-window.addEventListener("scroll", revealAboutMe);
-window.addEventListener("scroll", revealSkills);
+window.addEventListener("scroll", reveal);
 
 
 /*******handle hamburger menu toggle******/
@@ -249,4 +229,3 @@ $(document).ready(function() {
     	}	
     });
 });
-//issue 1 when i enter wrong para, to correct it immediately does not work i haave to reload page
