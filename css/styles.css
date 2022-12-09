@@ -437,7 +437,36 @@ i{
    margin-bottom: 10px;
   }
 
+/*--------------------casestudy--------------*/
+.main-con{
+  padding: 0 5%;
+}
 
+.case-study-begining{
+  display: flex;
+  gap: 0 20px;
+  /* width: 80%; */
+  /* justify-content: center; */
+}
+
+.begining-img{
+  width: 40%;
+  height: auto;
+}
+
+.middle-btn{
+  text-decoration: none;
+}
+
+.interface-img{
+  display: flex;
+  gap: 0 10px;
+
+}
+
+.img-portrait{
+  width: 30%;
+}
 @media all and (min-width: 500px){
   .ham-menu{
     display: none;
