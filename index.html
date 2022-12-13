@@ -50,7 +50,7 @@
           <a href="files/cv.pdf" class="btn resume-btn" download>Check my resume</a>
         </div>
         <div class="about-skills reveal">
-          <span class="skills-header"><b>&ltBelow is a list of my skills/&gt<b></span>
+          <span class="skills-header"><b>Skills<b></span>
           <div class="about-skills-card">
             <p>Frontend lanuages and libraries</p>
             <div class="skills-list">
@@ -164,54 +164,56 @@
     <!-- contact section  -->
     <div class="contact" id="contact">
       <div>
-        <h1 class="contact-title titles">Get in touch</h1>
+        <h1 class="contact-title titles">Contact</h1>
       </div>
-      <form id="form-message" method="POST">
-        <div class="form">
-          <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" required><br>
-          <span id="namecheck">**Name is missing</span> 
+      <div class="contact-main-con">
+        <div class="contact-info-con">
+          <h5>Contact information</h5>
+          <div class="footer-contacts">
+            <i class="fa-solid fa-phone-volume"></i>
+            <a href="tel:015753470885" role="phone-number" class="footer-link">
+            +49(0)15753470885
+            </a>
+          </div>
+          <div class="footer-contacts">
+            <i class="fa-solid fa-envelope"></i>
+            <a href = "mailto: tabetommy@yahoo.com" class="footer-link">
+              tabetommy@yahoo.com
+            </a>
+          </div>
+          <div class="social-media">
+            <h5>Find me on</h5>
+            <a href="https://github.com/tabetommy" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-xing"></i></a>
+            <a href="https://www.linkedin.com/in/tommy-egbe-304464116/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
         </div>
-        <div class="form">
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" required><br>  
-          <span id="emailcheck">**Email is missing</span> 
-          <span id="emailcheckchar">**Enter valid email</span>
-        </div>
-        <div class="form">
-          <label for="message">Message</label><br>
-          <textarea id="message" name="message" rows=10 cols=50 maxlength="200" placeholder="Leave a message..." required></textarea><br>
-          <span id="messagecheck">**message is missing</span> 
-        </div>
-        <div class="contact-button-con">
-          <button 
-          class="contact-button btn"
-          type="submit" 
-          >
-            Send 
-          </button>
-        </div>
-      </form>
-      <div class="contact-info-con">
-        <h5>Contact information</h5>
-        <div class="footer-contacts">
-          <i class="fa-solid fa-phone-volume"></i>
-          <a href="tel:015753470885" role="phone-number" class="footer-link">
-          +49(0)15753470885
-          </a>
-        </div>
-        <div class="footer-contacts">
-          <i class="fa-solid fa-envelope"></i>
-          <a href = "mailto: tabetommy@yahoo.com" class="footer-link">
-            tabetommy@yahoo.com
-          </a>
-        </div>
-        <div class="social-media">
-          <h5>Find me on</h5>
-          <a href="https://github.com/tabetommy" target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="#" target="_blank"><i class="fa-brands fa-xing"></i></a>
-          <a href="https://www.linkedin.com/in/tommy-egbe-304464116/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
+        <form id="form-message" method="POST">
+          <div class="form">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <span id="namecheck">**Name is missing</span> 
+          </div>
+          <div class="form">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br>  
+            <span id="emailcheck">**Email is missing</span> 
+            <span id="emailcheckchar">**Enter valid email</span>
+          </div>
+          <div class="form">
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows=10 cols=50 maxlength="200" placeholder="Leave a message..." required></textarea><br>
+            <span id="messagecheck">**message is missing</span> 
+          </div>
+          <div class="contact-button-con">
+            <button 
+            class="contact-button btn"
+            type="submit" 
+            >
+              Send 
+            </button>
+          </div>
+        </form>
       </div>
     </div>  
 
@@ -235,7 +237,6 @@
           <div class="modal-footer d-flex justify-content-center">
             <a target="_blank" class="btn source-code">Source code</a>
             <a target="_blank" class="btn live-site">Live-site</a>
-            <a target="_blank" class="btn" href="case-study.html">Case study</a>
         </div>
       </div>
     </div>
