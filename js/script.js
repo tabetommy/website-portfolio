@@ -1,4 +1,4 @@
-/********hadle project card***********/
+/********handle project card***********/
  const prData=[{
      title:"Meet app",
      description:" A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.The application uses the Google Calendar API to fetch upcoming events.",
@@ -114,6 +114,29 @@ window.addEventListener("scroll", reveal);
 })(jQuery)
 
 
+
+/****** handle highlight menu on scroll*****/
+const sections=document.querySelectorAll(".section");
+const navItems=document.querySelectorAll(".nav-bar a");
+
+window.addEventListener("scroll",()=>{
+	let currentSection="";
+	sections.forEach(section=>{
+		const sectionTop=section.offsetTop;
+		const sectionHeight=section.clientHeight;
+		if(pageYOffset >= sectionTop){
+				currentSection=section.getAttribute("id");
+		}
+	});
+
+	navItems.forEach(navItem=>{
+				navItem.classList.remove("active");
+			  if(navItem.classList.contains(currentSection)){
+			  	navItem.classList.add("active");
+			 }
+		   });
+
+})
 
 /*****handle form validation and submission***/
 $(document).ready(function() {

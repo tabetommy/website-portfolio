@@ -17,6 +17,7 @@ body{
   font-size: 16px;
 	line-height: 1.6;
   background-color: #F3F5F6;
+
 }
 
 * {
@@ -493,6 +494,7 @@ i{
     justify-content:end;
     overflow: hidden;
     background-color: #F3F5F6;
+    padding: 10px 0;
   }
 
   .nav-bar a {
@@ -506,10 +508,10 @@ i{
     font-weight: 700;
   }
 
-  .nav-bar a:hover {
+  .nav-bar a.active {
     background-color: var(--color-black-grey);
     color: var(--color-white);
-    
+    transition: 0.5 ease background-color;
   }
 
 }
