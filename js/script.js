@@ -1,10 +1,10 @@
 /********handle project card***********/
  const prData=[{
-     title:"Meet app",
-     description:" A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.The application uses the Google Calendar API to fetch upcoming events.",
-     technology: "React, aws lambda, service worker, Google calendar",
-     liveSite:"https://tabetommy.github.io/meetup/",
-     sourceCode:"https://github.com/tabetommy/meetup/tree/main"
+     title:"myFlix-Angular JS",
+     description:"A single-page,MEAN, responsive application with routing, rich interactions, several interface views, and a polished user experience. It consumes a movie api and displays movies, users are allowed to view movies, movie attributes and create a list of favourite movies.",
+     technology: "MEAN, Angular Material, myFlix api",
+     liveSite:"https://tabetommy.github.io/myFlix_Angular_client/welcome",
+     sourceCode:"https://github.com/tabetommy/myFlix_Angular_client"
   },
   {
     title:"myFlix",
