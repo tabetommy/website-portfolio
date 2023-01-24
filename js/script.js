@@ -40,6 +40,13 @@
    technology: "Vanilla JS, CSS, HTML, pokeApi",
    liveSite:"https://tabetommy.github.io/pokemon-app/",
    sourceCode:"https://github.com/tabetommy/pokemon-app" 
+  },
+  {
+   title:"University Website",
+   description:"A single page simplified University website. Where students can register, sigin and navigate useful information.",
+   technology: "React, React-Boostrap",
+   liveSite:"https://tabetommy.github.io/cosmopolitan-university/",
+   sourceCode:"https://github.com/tabetommy/cosmopolitan-university" 
   }
   ]
 
