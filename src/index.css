@@ -1,0 +1,38 @@
+html, body, #root {
+  height: 100%;
+}
+body {
+  font-family: 'Barlow', Arial, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f7f7fb;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Page transition animation */
+.page {
+  animation: fadeInUp 320ms ease both;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
