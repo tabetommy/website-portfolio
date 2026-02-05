@@ -36,6 +36,17 @@ export default function NavBar() {
           Portfolio
         </Typography>
       </Box>
+
+      {/* decorative liner inside Drawer (below header, fades to ends) */}
+      <Box sx={{
+        height: '4px',
+        borderRadius: '4px',
+        mx: 2,
+        my: 1,
+        background: 'linear-gradient(90deg, rgba(100,102,105,0) 0%, rgba(100,102,105,0.95) 50%, rgba(100,102,105,0) 100%)',
+        opacity: 0.95
+      }} />
+ 
       <List>
         <ListItem disablePadding>
           <ListItemButton
@@ -54,10 +65,10 @@ export default function NavBar() {
               '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
             }}
           >
-            <ListItemIcon sx={{ color: '#6b6b6b' }}>
+            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="About" />
+            <ListItemText primary="Über" sx={{ ml: 0.5 }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -77,10 +88,10 @@ export default function NavBar() {
               '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
             }}
           >
-            <ListItemIcon sx={{ color: '#6b6b6b' }}>
+            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
               <FolderIcon />
             </ListItemIcon>
-            <ListItemText primary="Projects" />
+            <ListItemText primary="Projekte" sx={{ ml: 0.5 }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -100,10 +111,10 @@ export default function NavBar() {
               '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
             }}
           >
-            <ListItemIcon sx={{ color: '#6b6b6b' }}>
+            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
               <BuildIcon />
             </ListItemIcon>
-            <ListItemText primary="Skills" />
+            <ListItemText primary="Fähigkeiten" sx={{ ml: 0.5 }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -123,10 +134,10 @@ export default function NavBar() {
               '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
             }}
           >
-            <ListItemIcon sx={{ color: '#6b6b6b' }}>
+            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
               <WorkHistoryIcon />
             </ListItemIcon>
-            <ListItemText primary="Experience" />
+            <ListItemText primary="Erfahrung" sx={{ ml: 0.5 }} />
           </ListItemButton>
         </ListItem>
       </List>
