@@ -1,4 +1,3 @@
-import React from 'react';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
@@ -39,7 +38,7 @@ export default function NavBar() {
 
       {/* decorative liner inside Drawer (below header, fades to ends) */}
       <Box sx={{
-        height: '4px',
+        height: '1px',
         borderRadius: '4px',
         mx: 2,
         my: 1,

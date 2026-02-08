@@ -15,17 +15,16 @@ export default function TopBar({ drawerWidth = 240 }) {
       sx={{
         left: `${drawerWidth}px`,
         width: `calc(100% - ${drawerWidth}px)`,
-        backgroundColor: '#fff',
+        backgroundColor: '#f0f0f0',
         color: '#000',
         boxShadow: 'none',
-        borderBottom: '1px solid #e0e0e0',
         m: 0,
         p: 0
       }}
     >
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1, color: '#000' }}>
-          Dashboard
+          Portfolio
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
           <Button color="inherit" startIcon={<DescriptionIcon />} component="a" href="#">

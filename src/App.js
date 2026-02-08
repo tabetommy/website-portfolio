@@ -15,7 +15,7 @@ export default function App() {
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', backgroundColor: '#F0F0F0' }}>
       <NavBar />
-      {/* <TopBar drawerWidth={drawerWidth}  /> */}
+      <TopBar drawerWidth={drawerWidth}  /> 
       <Box sx={{ flex: 1, mx: '24px', mt: '64px', display: 'flex', flexDirection: 'column' }}>
 
         <Box key={location.pathname} className="page" sx={{ backgroundColor: '#fff', px: 3, py: 4, borderRadius: '8px', flex: 1, boxShadow: '0 2px 8px rgba(0,0,0,0.08)', pb: '64px', mb: '64px' }}>
