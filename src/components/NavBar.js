@@ -12,10 +12,25 @@ import BuildIcon from '@mui/icons-material/Build';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import { Link as RouterLink, NavLink } from 'react-router-dom';
 import profile from '../assets/profile-img.jpeg';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import DescriptionIcon from '@mui/icons-material/Description';
 
-const drawerWidth = 300;
 
-export default function NavBar() {
+ const navItems=[
+    {to: '/about', text: 'Über mich', linkicon: <HomeIcon />,target:'_self'},
+    {to: '/projects', text: 'Projekte', linkicon: <FolderIcon />,target:'_self'},
+    {to: '/skills', text: 'Fähigkeiten', linkicon: <BuildIcon />,target:'_self'},
+    {to: '/experience', text: 'Erfahrung', linkicon: <WorkHistoryIcon />,target:'_self'},
+    { text: 'LinkedIn', to: 'https://linkedin.com/in/tommy-egbe-304464116/', linkicon: <LinkedInIcon />,target:'_blank'},
+    { text: 'E-Mail', to: 'mailto:tabetommy@gmail.com', linkicon: <EmailIcon />,target:'_self'},
+    { text: 'CV / Resume', to: '/Lebenslauf.pdf', linkicon: <DescriptionIcon />,target:'_blank'},
+    ]
+
+
+export const drawerWidth = 300;
+
+export const NavBar=()=>{
   return (
     <Drawer
       variant="permanent"
@@ -149,5 +164,39 @@ export default function NavBar() {
   );
 }
 
-export { drawerWidth };
+
+const navLinkStyles = {
+    color: '#000',
+    my: 1,
+    mx: 1,
+    borderRadius: '8px',
+    '&.active': {
+      backgroundColor: '#fff',
+      borderLeft: '4px solid #09148f',
+      boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
+      '& .MuiListItemIcon-root': { color: '#09148f' }
+    }
+  };
+
+
+
+  // The content of your slide-in menu
+  export const MobileNavbar = ({onLinkClick})=>{
+   return ( <Box onClick={onLinkClick} sx={{ textAlign: 'center', height: '100%', backgroundColor: '#F0F0F0' }}>
+      <List sx={{ width: '100%', pt: 4 }}>
+        {
+          navItems.map(item => (
+            <ListItem disablePadding key={item.to}>
+              <ListItemButton component={NavLink} to={item.to} sx={navLinkStyles} target={item.target}> 
+                <ListItemIcon>{item.linkicon}</ListItemIcon>
+                <ListItemText primary={item.text} />
+              </ListItemButton>
+            </ListItem>
+          ))
+        }
+      </List>
+    </Box>)
+  };
+
+
 

@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import DescriptionIcon from '@mui/icons-material/Description';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function TopBar() {
   return (
@@ -27,11 +28,20 @@ export default function TopBar() {
           Fullstack Web-entwickler
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
-          <Button color="inherit" startIcon={<DescriptionIcon />} component="a" href="#">
-            Resume
+          <Button 
+            component="a" 
+            href="https://www.linkedin.com/in/tommy-egbe-304464116/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            startIcon={<LinkedInIcon />} 
+          >
+            LinkedIn
           </Button>
-          <Button color="inherit" startIcon={<AssignmentTurnedInIcon />} component="a" href="#">
-            Arbeitzeugnis
+          <Button color="inherit" startIcon={<AssignmentTurnedInIcon />} component="a" href="mailto:tabetommy@gmail.com">
+            schreiben Sie mir
+          </Button>
+          <Button color="inherit" startIcon={<DescriptionIcon />} component="a" href="/Lebenslauf.pdf" target="_blank">
+            Lebenslauf
           </Button>
         </Box>
       </Toolbar>
