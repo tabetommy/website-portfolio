@@ -7,7 +7,6 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
 import Skills from './pages/Skills';
-import Experience from './pages/Experience';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function App() {
@@ -47,9 +46,6 @@ export default function App() {
       <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
         <NavBar />
       </Box>
-      <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-        <TopBar />
-      </Box> 
       <Box sx={{ flex: 1, mx: '24px', mt: '64px', display: 'flex', flexDirection: 'column' }}>
 
         <Box key={location.pathname} className="page" sx={{ backgroundColor: '#fff', px: 3, py: 4, borderRadius: '8px', flex: 1, boxShadow: '0 2px 8px rgba(0,0,0,0.08)', pb: '64px', mb: '64px' }}>
@@ -59,7 +55,6 @@ export default function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
           </Routes>
         </Box>
       </Box>

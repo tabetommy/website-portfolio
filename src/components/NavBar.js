@@ -20,12 +20,24 @@ import DescriptionIcon from '@mui/icons-material/Description';
  const navItems=[
     {to: '/about', text: 'Über mich', linkicon: <HomeIcon />,target:'_self'},
     {to: '/projects', text: 'Projekte', linkicon: <FolderIcon />,target:'_self'},
-    {to: '/skills', text: 'Fähigkeiten', linkicon: <BuildIcon />,target:'_self'},
-    {to: '/experience', text: 'Erfahrung', linkicon: <WorkHistoryIcon />,target:'_self'},
-    { text: 'LinkedIn', to: 'https://linkedin.com/in/tommy-egbe-304464116/', linkicon: <LinkedInIcon />,target:'_blank'},
+    {to: '/skills', text: 'Fähigkeiten', linkicon: <WorkHistoryIcon />,target:'_self'},
+    { text: 'Linkedin', to: 'https://linkedin.com/in/tommy-egbe-304464116/', linkicon: <LinkedInIcon />,target:'_blank'},
     { text: 'E-Mail', to: 'mailto:tabetommy@gmail.com', linkicon: <EmailIcon />,target:'_self'},
-    { text: 'CV / Resume', to: '/Lebenslauf.pdf', linkicon: <DescriptionIcon />,target:'_blank'},
+    { text: 'Lebenslauf', to: '/Lebenslauf.pdf', linkicon: <DescriptionIcon />,target:'_blank'},
     ]
+
+const navLinkStyles = {
+    color: '#000',
+    my: 1,
+    mx: 1,
+    borderRadius: '8px',
+    '&.active': {
+      backgroundColor: '#fff',
+      borderLeft: '4px solid #09148f',
+      boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
+      '& .MuiListItemIcon-root': { color: '#09148f' }
+    }
+  };
 
 
 export const drawerWidth = 300;
@@ -62,122 +74,22 @@ export const NavBar=()=>{
         opacity: 0.95
       }} />
  
-      <List sx={{ width: '70%' }}>
-        <ListItem disablePadding>
-          <ListItemButton
-            component={NavLink}
-            to="/about"
-            sx={{
-              color: '#000',
-              my: 1,
-              mx: 1,
-              borderRadius: '8px',
-              '&.active': {
-                backgroundColor: '#fff',
-                borderLeft: '4px solid #09148f',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
-                '& .MuiListItemIcon-root': { color: '#09148f' }
-              },
-              '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
-            }}
-          >
-            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Über"  />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton
-            component={NavLink}
-            to="/projects"
-            sx={{
-              color: '#000',
-              my: 1,
-              mx: 1,
-              borderRadius: '8px',
-              '&.active': {
-                backgroundColor: '#fff',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
-                 borderLeft: '4px solid #09148f',
-                '& .MuiListItemIcon-root': { color: '#09148f' }
-              },
-              '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
-            }}
-          >
-            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
-              <FolderIcon />
-            </ListItemIcon>
-            <ListItemText primary="Projekte"  />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton
-            component={NavLink}
-            to="/skills"
-            sx={{
-              color: '#000',
-              my: 1,
-              mx: 1,
-              borderRadius: '8px',
-              '&.active': {
-                backgroundColor: '#fff',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
-                 borderLeft: '4px solid #09148f',
-                '& .MuiListItemIcon-root': { color: '#09148f' }
-              },
-              '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
-            }}
-          >
-            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
-              <BuildIcon />
-            </ListItemIcon>
-            <ListItemText primary="Fähigkeiten"  />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton
-            component={NavLink}
-            to="/experience"
-            sx={{
-              color: '#000',
-              my: 1,
-              mx: 1,
-              borderRadius: '8px',
-              '&.active': {
-                backgroundColor: '#fff',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
-                 borderLeft: '4px solid #09148f',
-                '& .MuiListItemIcon-root': { color: '#09148f' }
-              },
-              '&:hover': { backgroundColor: 'rgba(255,255,255,0.6)' }
-            }}
-          >
-            <ListItemIcon sx={{ color: '#6b6b6b', minWidth: 36 }}>
-              <WorkHistoryIcon />
-            </ListItemIcon>
-            <ListItemText primary="Erfahrung"  />
-          </ListItemButton>
-        </ListItem>
+      <List sx={{ width: '80%' }}>
+         {
+          navItems.map(item => (
+            <ListItem disablePadding key={item.to}>
+              <ListItemButton component={NavLink} to={item.to} sx={navLinkStyles} target={item.target}> 
+                <ListItemIcon sx={{ minWidth: '40px' }}>{item.linkicon}</ListItemIcon>
+                <ListItemText primary={item.text} />
+              </ListItemButton>
+            </ListItem>
+          ))
+        }
       </List>
+
     </Drawer>
   );
 }
-
-
-const navLinkStyles = {
-    color: '#000',
-    my: 1,
-    mx: 1,
-    borderRadius: '8px',
-    '&.active': {
-      backgroundColor: '#fff',
-      borderLeft: '4px solid #09148f',
-      boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
-      '& .MuiListItemIcon-root': { color: '#09148f' }
-    }
-  };
-
 
 
   // The content of your slide-in menu
