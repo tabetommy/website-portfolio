@@ -92,12 +92,28 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Portfolio Site',
-    short: 'This demo portfolio built with React and MUI.',
-    details: 'A minimal portfolio demonstrating routing, theming and project pages.',
-    tech: ['React', 'MUI', 'React Router'],
-    imgurl:'magicBrain'
-  }
+    title: 'croire et obeir',
+    short: 'Dieses Projekt ist eine moderne, leistungsstarke App zum Studium der Heiligen Schrift.',
+    imgurl:'croireetobeir',
+    details: {
+      desc:'Dieses Projekt ist eine moderne, leistungsstarke App zum Studium der Heiligen Schrift. Sie basiert auf einer robusten Full-Stack-Architektur und legt großen Wert auf Datensicherheit und Performance.',
+      features: [
+        {
+          title: '',
+          items: [
+            'Backend: Ein in Docker containerisiertes Express-Backend, das für Skalierbarkeit und einfache Bereitstellung optimiert ist.',
+            'Authentifizierung: Sicheres Login-System, das sowohl traditionelle E-Mail/Passwort-Methoden als auch Google OAuth 2.0 unterstützt.',
+            'Datenbank: Ein durchdachtes MySQL-Schema, das speziell für die schnelle Abfrage von über 30.000 Versen pro Version entwickelt wurde.',
+            'Frontend: Eine intuitive Benutzeroberfläche, entwickelt mit React Native, die eine nahtlose Erfahrung auf Android und im Web bietet.',
+          ],
+          
+        },
+        
+      ]
+    },
+    sourceCode:'https://github.com/croire-obeir/bible-app',
+    stack: ["React Native", "Expo", 'Express', 'MongoDB','Google Auth Library','MySQL',"Docker"]
+  },
 ];
 
 export default projects;

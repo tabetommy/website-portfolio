@@ -30,7 +30,7 @@ export default function ProjectCard({ project }) {
         <Button 
         size="small"
         onClick={() => navigate(`/projects/${project.id}`)}
-        >Learn More</Button>
+        >Mehr erfahren</Button>
       </CardActions>
     </Card>
   );
